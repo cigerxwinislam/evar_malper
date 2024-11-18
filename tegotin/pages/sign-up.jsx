@@ -5,7 +5,7 @@ const SignupPage = () => {
   return (
     <>
       <Head>
-        <title>Bibe Encam</title>
+        <title>Üye Ol</title>
       </Head>
       <SignUp />
     </>

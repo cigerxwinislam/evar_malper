@@ -38,7 +38,7 @@ const SignUp = () => {
           }),
         });
         mutate({ user: response.user }, false);
-        toast.success('Hûn bûn encam serxere');
+        toast.success('Yazarlık kaydı yapıldı.');
         router.replace('/feed');
       } catch (e) {
         toast.error(e.message);
@@ -52,10 +52,10 @@ const SignUp = () => {
   return (
     <Wrapper className={styles.root}>
       <div className={styles.main}>
-        <h1 className={styles.title}>Tevlê Bin Niha!</h1>
+        <h1 className={styles.title}>Yazarlık Kaydı Oluşturun</h1>
         <form onSubmit={onSubmit}>
           <Container alignItems="center">
-            <p className={styles.subtitle}>Têketina We</p>
+            <p className={styles.subtitle}>Giriş Bilgileriniz</p>
             <div className={styles.seperator} />
           </Container>
           <Input
@@ -79,13 +79,13 @@ const SignUp = () => {
           />
           <Spacer size={0.75} axis="vertical" />
           <Container alignItems="center">
-            <p className={styles.subtitle}>Derbarê We'de</p>
+            <p className={styles.subtitle}>Hakkınızda</p>
             <div className={styles.seperator} />
           </Container>
           <Input
             ref={usernameRef}
-            autoComplete="username"
-            placeholder="Hûnê bi vî navî xwîya bin"
+            autoComplete="bernav"
+            placeholder="Mahlas"
             ariaLabel="Username"
             size="large"
             required
@@ -94,7 +94,7 @@ const SignUp = () => {
           <Input
             ref={nameRef}
             autoComplete="name"
-            placeholder="Nav"
+            placeholder="İsim"
             ariaLabel="Nav"
             size="large"
             required
@@ -107,14 +107,14 @@ const SignUp = () => {
             size="large"
             loading={isLoading}
           >
-            Bibe Endam
+            Kayıt Yap
           </Button>
         </form>
       </div>
       <div className={styles.footer}>
         <Link href="/login" passHref>
           <TextLink color="link" variant="highlight">
-            Jixwe Hûn Endam in? Têketin
+            Kaydın var mı? Giriş yap
           </TextLink>
         </Link>
       </div>

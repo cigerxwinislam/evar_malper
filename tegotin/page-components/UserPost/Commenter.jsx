@@ -48,11 +48,11 @@ const CommenterInner = ({ user, post }) => {
         <Input
           ref={contentRef}
           className={styles.input}
-          placeholder="Şîrove ya xwe bike"
+          placeholder="Yorumunuzu yazın....."
           ariaLabel="Şîrove ya xwe bike"
         />
         <Button type="success" loading={isLoading}>
-        Şîrove Bike
+        Yorum yap
         </Button>
       </Container>
     </form>
