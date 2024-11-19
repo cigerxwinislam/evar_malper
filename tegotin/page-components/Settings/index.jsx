@@ -30,8 +30,8 @@ const EmailVerify = ({ user }) => {
     <Container className={styles.note}>
       <Container flex={1}>
         <p>
-          <strong>Note:</strong> <span>Email a we</span> (
-          <span className={styles.link}>{user.email}</span>) hat rast kirin.
+          <strong>Note:</strong> <span>Emailiniz</span> (
+          <span className={styles.link}>{user.email}</span>) doğrulandı.
         </p>
       </Container>
       <Spacer size={1} axis="horizontal" />
@@ -41,7 +41,7 @@ const EmailVerify = ({ user }) => {
         onClick={verify}
         disabled={status === 'success'}
       >
-        Rast Bikin
+        Doğrulayın
       </Button>
     </Container>
   );
@@ -83,14 +83,14 @@ const Auth = () => {
           htmlType="password"
           autoComplete="current-password"
           ref={oldPasswordRef}
-          label=" Password a Berê"
+          label=" Eski şifre"
         />
         <Spacer size={0.5} axis="vertical" />
         <Input
           htmlType="password"
           autoComplete="new-password"
           ref={newPasswordRef}
-          label="Password a Nû"
+          label="Yeni Şifre"
         />
         <Spacer size={0.5} axis="vertical" />
         <Button
@@ -99,7 +99,7 @@ const Auth = () => {
           type="success"
           loading={isLoading}
         >
-          Qeyd Bike
+          Kaydet
         </Button>
       </form>
     </section>
@@ -142,7 +142,7 @@ const AboutYou = ({ user, mutate }) => {
           body: formData,
         });
         mutate({ user: response.user }, false);
-        toast.success('Profil a we hate rast kirin');
+        toast.success('Profiliniz doğrulandı ');
       } catch (e) {
         toast.error(e.message);
       } finally {
@@ -164,17 +164,17 @@ const AboutYou = ({ user, mutate }) => {
     <section className={styles.card}>
       <h4 className={styles.sectionTitle}>Derbare We</h4>
       <form onSubmit={onSubmit}>
-        <Input ref={usernameRef} label="Navê We" />
+        <Input ref={usernameRef} label="Adınız" />
         <Spacer size={0.5} axis="vertical" />
-        <Input ref={nameRef} label="Navê We" />
+        <Input ref={nameRef} label="Adınız" />
         <Spacer size={0.5} axis="vertical" />
-        <Textarea ref={bioRef} label="Bio ya We " />
+        <Textarea ref={bioRef} label="Öz geçmiş " />
         <Spacer size={0.5} axis="vertical" />
         <span className={styles.label}>Avatar ê We</span>
         <div className={styles.avatar}>
           <Avatar size={96} username={user.username} url={avatarHref} />
           <input
-            aria-label="Avatar ê We"
+            aria-label="Avatarınız"
             type="file"
             accept="image/*"
             ref={profilePictureRef}
@@ -188,7 +188,7 @@ const AboutYou = ({ user, mutate }) => {
           type="success"
           loading={isLoading}
         >
-          Qeyd Bike
+          Kaydet 
         </Button>
       </form>
     </section>
